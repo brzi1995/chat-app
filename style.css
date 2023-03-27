@@ -1,0 +1,111 @@
+
+
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #087941, #f1f2f5, #ecebf3, #f7f4f8, #087941);
+    background-size: 100% auto;
+ }
+
+  
+  h1 {
+    text-align: center;
+  }
+    h1:before,
+    h1:after {
+      content: '[';
+      display: inline-block;
+      position: relative;
+      top: 1px;
+      height: 100%;
+      font-size: 1.25em;
+      color: tomato;
+      
+      transition: all 0.5s ease;
+  }
+  
+  h1:after { content: ']'; }
+  
+  h1:hover:before { 
+      transform: translateX(-5px);
+  }
+  
+  h1:hover:after { 
+      transform: translateX(5px);
+  }
+
+  .members-count,
+  .members-list,
+  .messages {
+    border: 1px solid #131111;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .messages {
+    flex-shrink: 1s;
+    overflow: auto;
+  }
+
+  .message {
+    padding: 5px 0;
+  }
+  .message .member {
+    display: inline-block;
+  }
+
+  .member {
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .message-form {
+    display: flex;
+    flex-shrink: 0;
+  }
+  .message-form__input {
+    flex-grow: 1;
+    border: 1px solid #dfdfdf;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  .message-form__button {
+    margin: 10px;
+    background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+  
+
+  
+
+.message-form__button:hover {
+  background-color: #fff;
+}
+
+.message-form__button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
